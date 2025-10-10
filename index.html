@@ -27,18 +27,11 @@
   </style>
 </head>
 <body>
-  <!-- Hidden anchor used to download file; button triggers it -->
-  <a id="certLink" href="certificate.pdf" download style="display:none;"></a>
-
   <button class="btn" id="certificateBtn">Course Certificate</button>
 
   <script>
     document.getElementById('certificateBtn').addEventListener('click', function(){
-      // If certificate.pdf is present in the root, this will trigger a download.
-      // If you prefer to open in a new tab instead, replace .click() with:
-      // window.open('certificate.pdf', '_blank');
-      const a = document.getElementById('certLink');
-      a.click();
+      window.open('certificate.pdf', '_blank');
     });
   </script>
 </body>
