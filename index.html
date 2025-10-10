@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Course Certificate</title>
+  <style>
+    html,body{height:100%;margin:0}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Arial, sans-serif;
+      background:#fff;
+    }
+    .btn{
+      background:#337ab7;
+      color:#fff;
+      border:none;
+      padding:12px 26px;
+      border-radius:6px;
+      font-size:16px;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(0,0,0,0.06);
+    }
+    .btn:hover{background:#286090}
+  </style>
+</head>
+<body>
+  <!-- Hidden anchor used to download file; button triggers it -->
+  <a id="certLink" href="certificate.pdf" download style="display:none;"></a>
+
+  <button class="btn" id="certificateBtn">Course Certificate</button>
+
+  <script>
+    document.getElementById('certificateBtn').addEventListener('click', function(){
+      // If certificate.pdf is present in the root, this will trigger a download.
+      // If you prefer to open in a new tab instead, replace .click() with:
+      // window.open('certificate.pdf', '_blank');
+      const a = document.getElementById('certLink');
+      a.click();
+    });
+  </script>
+</body>
+</html>
